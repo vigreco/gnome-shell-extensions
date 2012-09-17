@@ -1,2 +1,2 @@
-Presences-shell-extension
+gnome-shell-extension
 =========================
