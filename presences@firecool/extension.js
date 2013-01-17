@@ -2,7 +2,14 @@ const Lang = imports.lang;
 const GnomeSession = imports.misc.gnomeSession;
 const Tp = imports.gi.TelepathyGLib;
 const IMStatus = imports.ui.userMenu.IMStatus;
-const statusChooser = imports.ui.main.panel._statusArea.userMenu._statusChooser;
+
+// check if GNOME 3.4 or 3.6
+if(imports.ui.main.panel._statusArea != null) {
+    var statusChooser = imports.ui.main.panel._statusArea.userMenu._statusChooser;
+} else {
+    var statusChooser = imports.ui.main.panel.statusArea.userMenu._statusChooser;
+}
+
 
 function init() {}
 
